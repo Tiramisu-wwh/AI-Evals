@@ -1,7 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState, useTransition } from "react";
+import { useState } from "react";
 
 import type { Role } from "@/lib/types";
 
@@ -10,40 +9,43 @@ function getDefaultRoute(role: Role) {
 }
 
 export function LoginForm() {
-  const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [pending, startTransition] = useTransition();
+  const [pending, setPending] = useState(false);
 
   async function handleSubmit() {
     setError("");
+    setPending(true);
 
-    const response = await fetch("/api/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username,
-        password,
-      }),
-    });
+    try {
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      });
 
-    const body = (await response.json().catch(() => null)) as
-      | { id: string; role: Role }
-      | { message?: string }
-      | null;
+      const body = (await response.json().catch(() => null)) as
+        | { id: string; role: Role }
+        | { message?: string }
+        | null;
 
-    if (!response.ok || !body || !("role" in body)) {
-      setError(body && "message" in body ? body.message ?? "登录失败" : "登录失败");
-      return;
+      if (!response.ok || !body || !("role" in body)) {
+        setError(body && "message" in body ? body.message ?? "登录失败" : "登录失败");
+        return;
+      }
+
+      window.location.assign(getDefaultRoute(body.role));
+    } catch {
+      setError("登录失败");
+    } finally {
+      setPending(false);
     }
-
-    startTransition(() => {
-      router.push(getDefaultRoute(body.role));
-      router.refresh();
-    });
   }
 
   return (

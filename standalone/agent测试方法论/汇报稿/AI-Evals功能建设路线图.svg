@@ -1,0 +1,151 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F9FC"/>
+      <stop offset="1" stop-color="#EEF3F8"/>
+    </linearGradient>
+    <linearGradient id="phase1" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF4E8"/>
+      <stop offset="1" stop-color="#FFE6CC"/>
+    </linearGradient>
+    <linearGradient id="phase2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#EEF6FF"/>
+      <stop offset="1" stop-color="#DCEBFF"/>
+    </linearGradient>
+    <linearGradient id="phase3" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F2F7F3"/>
+      <stop offset="1" stop-color="#DDEEDF"/>
+    </linearGradient>
+    <linearGradient id="phase4" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F6F2FF"/>
+      <stop offset="1" stop-color="#E7DDFF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#1F2937" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10V0Z" fill="#94A3B8"/>
+    </marker>
+    <style>
+      .title { font: 700 34px "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; fill: #0F172A; }
+      .subtitle { font: 400 16px "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; fill: #475569; }
+      .phase-title { font: 700 22px "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; fill: #0F172A; }
+      .phase-subtitle { font: 600 14px "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; fill: #475569; }
+      .section-label { font: 700 14px "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; fill: #334155; letter-spacing: 1px; }
+      .chip-text { font: 700 12px "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; fill: #FFFFFF; }
+      .item { font: 500 14px "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; fill: #1E293B; }
+      .cross-title { font: 700 18px "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; fill: #0F172A; }
+      .cross-item { font: 500 14px "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; fill: #334155; }
+      .footer { font: 400 13px "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; fill: #64748B; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="0" fill="url(#bg)"/>
+
+  <text x="72" y="82" class="title">AI Evals 功能建设路线图</text>
+  <text x="72" y="114" class="subtitle">起点为当前 AI Evals 提交平台，先把评测数据收集和阶段流转跑通，再逐步补执行、治理和企业级能力。</text>
+
+  <g transform="translate(72 150)">
+    <rect x="0" y="0" width="340" height="500" rx="24" fill="url(#phase1)" stroke="#F59E0B" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="28" y="24" width="88" height="28" rx="14" fill="#EA580C"/>
+    <text x="72" y="43" text-anchor="middle" class="chip-text">正在建设</text>
+    <text x="28" y="88" class="phase-title">阶段 1 试点落地</text>
+    <text x="28" y="116" class="phase-subtitle">以当前项目为起点</text>
+    <text x="28" y="162" class="section-label">当前功能</text>
+    <rect x="28" y="178" width="284" height="240" rx="16" fill="#FFFFFF" fill-opacity="0.72" stroke="#F1F5F9"/>
+    <text x="46" y="212" class="item">• 登录与角色区分</text>
+    <text x="46" y="246" class="item">• 评测任务提交</text>
+    <text x="46" y="280" class="item">• 我的提交 / 管理员总览</text>
+    <text x="46" y="314" class="item">• 评分模板与结论字段标准化</text>
+    <text x="46" y="348" class="item">• 基础状态流转</text>
+    <text x="46" y="382" class="item">• 结果导出</text>
+    <text x="28" y="454" class="section-label">近期补齐</text>
+    <text x="46" y="486" class="item">• 项目列表和项目详情页</text>
+    <text x="46" y="518" class="item">• 样本上传与分类</text>
+    <text x="46" y="550" class="item">• 轮次结果记录</text>
+    <text x="46" y="582" class="item">• 坏例库与基础统计看板</text>
+  </g>
+
+  <g transform="translate(452 150)">
+    <rect x="0" y="0" width="320" height="500" rx="24" fill="url(#phase2)" stroke="#60A5FA" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="28" y="24" width="88" height="28" rx="14" fill="#2563EB"/>
+    <text x="72" y="43" text-anchor="middle" class="chip-text">下一阶段</text>
+    <text x="28" y="88" class="phase-title">阶段 2 接入完善</text>
+    <text x="28" y="116" class="phase-subtitle">把单次提交扩成完整流程</text>
+    <text x="28" y="162" class="section-label">流程补齐</text>
+    <rect x="28" y="178" width="264" height="306" rx="16" fill="#FFFFFF" fill-opacity="0.72" stroke="#E2E8F0"/>
+    <text x="46" y="212" class="item">• G1-G7 阶段模板在线化</text>
+    <text x="46" y="246" class="item">• 成功标准、失败边界、风险等级</text>
+    <text x="46" y="280" class="item">• 技术方案评审与测试用例评审</text>
+    <text x="46" y="314" class="item">• 评测轮次与基线版本管理</text>
+    <text x="46" y="348" class="item">• 坏例回流和复盘记录</text>
+    <text x="46" y="382" class="item">• 评审意见、处理记录、留痕</text>
+    <text x="46" y="416" class="item">• 项目维度看板和阶段结论</text>
+    <text x="28" y="536" class="section-label">目标</text>
+    <text x="46" y="568" class="item">• 可追踪、可回看、可复用</text>
+  </g>
+
+  <g transform="translate(812 150)">
+    <rect x="0" y="0" width="320" height="500" rx="24" fill="url(#phase3)" stroke="#34D399" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="28" y="24" width="88" height="28" rx="14" fill="#059669"/>
+    <text x="72" y="43" text-anchor="middle" class="chip-text">后续扩展</text>
+    <text x="28" y="88" class="phase-title">阶段 3 平台化</text>
+    <text x="28" y="116" class="phase-subtitle">接入执行和统一治理</text>
+    <text x="28" y="162" class="section-label">核心模块</text>
+    <rect x="28" y="178" width="264" height="306" rx="16" fill="#FFFFFF" fill-opacity="0.72" stroke="#E2E8F0"/>
+    <text x="46" y="212" class="item">• 批量导入样本与评测集管理</text>
+    <text x="46" y="246" class="item">• 接入 Agent 执行底座与结果回写</text>
+    <text x="46" y="280" class="item">• Token、耗时、成功率统计</text>
+    <text x="46" y="314" class="item">• 权限、组织、项目空间隔离</text>
+    <text x="46" y="348" class="item">• 统一模板、样本、坏例资产中心</text>
+    <text x="46" y="382" class="item">• 通知、审批、准入规则配置</text>
+    <text x="46" y="416" class="item">• 多项目横向对比与排行榜</text>
+    <text x="28" y="536" class="section-label">目标</text>
+    <text x="46" y="568" class="item">• 团队共用平台</text>
+  </g>
+
+  <g transform="translate(1172 150)">
+    <rect x="0" y="0" width="356" height="500" rx="24" fill="url(#phase4)" stroke="#A78BFA" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="28" y="24" width="88" height="28" rx="14" fill="#7C3AED"/>
+    <text x="72" y="43" text-anchor="middle" class="chip-text">后续扩展</text>
+    <text x="28" y="88" class="phase-title">阶段 4 企业级</text>
+    <text x="28" y="116" class="phase-subtitle">支撑规模化接入和长期运行</text>
+    <text x="28" y="162" class="section-label">企业能力</text>
+    <rect x="28" y="178" width="300" height="306" rx="16" fill="#FFFFFF" fill-opacity="0.72" stroke="#E2E8F0"/>
+    <text x="46" y="212" class="item">• SSO、组织架构、细粒度权限</text>
+    <text x="46" y="246" class="item">• 测试 / 预发 / 生产多环境管理</text>
+    <text x="46" y="280" class="item">• 安全评测模块和高风险动作管控</text>
+    <text x="46" y="314" class="item">• 合规归档、审计导出、签字留痕</text>
+    <text x="46" y="348" class="item">• 成本治理、预算、资源调度</text>
+    <text x="46" y="382" class="item">• 与研发、发布、数据平台集成</text>
+    <text x="46" y="416" class="item">• 开放接口与统一运营视图</text>
+    <text x="28" y="536" class="section-label">目标</text>
+    <text x="46" y="568" class="item">• 企业内部长期运行平台</text>
+  </g>
+
+  <line x1="412" y1="400" x2="444" y2="400" stroke="#94A3B8" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="772" y1="400" x2="804" y2="400" stroke="#94A3B8" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1132" y1="400" x2="1164" y2="400" stroke="#94A3B8" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(72 692)">
+    <rect x="0" y="0" width="1456" height="146" rx="24" fill="#FFFFFF" stroke="#DCE3EC" filter="url(#shadow)"/>
+    <text x="32" y="42" class="cross-title">贯穿各阶段的横向能力</text>
+    <rect x="32" y="62" width="168" height="34" rx="17" fill="#FFF7ED"/>
+    <text x="116" y="84" text-anchor="middle" class="cross-item">统一模板和字段标准</text>
+    <rect x="216" y="62" width="146" height="34" rx="17" fill="#EFF6FF"/>
+    <text x="289" y="84" text-anchor="middle" class="cross-item">样本与坏例资产</text>
+    <rect x="378" y="62" width="134" height="34" rx="17" fill="#F0FDF4"/>
+    <text x="445" y="84" text-anchor="middle" class="cross-item">评分规则和口径</text>
+    <rect x="528" y="62" width="130" height="34" rx="17" fill="#FAF5FF"/>
+    <text x="593" y="84" text-anchor="middle" class="cross-item">权限和审批流</text>
+    <rect x="674" y="62" width="122" height="34" rx="17" fill="#F8FAFC"/>
+    <text x="735" y="84" text-anchor="middle" class="cross-item">审计和留痕</text>
+    <rect x="812" y="62" width="160" height="34" rx="17" fill="#FEF2F2"/>
+    <text x="892" y="84" text-anchor="middle" class="cross-item">Token 与成本统计</text>
+    <rect x="988" y="62" width="132" height="34" rx="17" fill="#FDF4FF"/>
+    <text x="1054" y="84" text-anchor="middle" class="cross-item">安全和风险控制</text>
+    <rect x="1136" y="62" width="180" height="34" rx="17" fill="#F0F9FF"/>
+    <text x="1226" y="84" text-anchor="middle" class="cross-item">研发 / 发布 / 数据平台集成</text>
+  <text x="32" y="124" class="footer">当前建议先把阶段 1 做扎实：项目、样本、评分模板、轮次、坏例、结论、导出、基础看板。自动评分待接入 Agent 执行底座后推进，阶段 3 再接自动执行与平台治理。</text>
+  </g>
+</svg>
